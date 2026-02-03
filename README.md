@@ -1,4 +1,4 @@
-#Fake News Detection Project
+# Fake News Detection Project
 
 This project aims to develop a machine-learning model capable of identifying and classifying news articles as Fake or Not Fake. The spread of fake news can have serious adverse effects on society, culture, and public opinion.
 This project involves building and training multiple machine learning models on a diverse dataset of news articles and comparing their performance to identify the most accurate classifier.
