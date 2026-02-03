@@ -1,18 +1,23 @@
-# Fake News Detection Project
+#Fake News Detection Project
 
-<img src="https://socialify.git.ci/kapilsinghnegi/Fake-News-Detection/image?description=1&font=Source%20Code%20Pro&forks=1&issues=1&language=1&name=1&owner=1&pattern=Charlie%20Brown&pulls=1&stargazers=1&theme=Dark" alt="Fake-News-Detection" width="1280" height="320" />
+This project aims to develop a machine-learning model capable of identifying and classifying news articles as Fake or Not Fake. The spread of fake news can have serious adverse effects on society, culture, and public opinion.
+This project involves building and training multiple machine learning models on a diverse dataset of news articles and comparing their performance to identify the most accurate classifier.
 
+The following techniques were used to evaluate the model performance:
 
-The project aims to develop a machine-learning model capable of identifying and classifying any news article as fake or not. The distribution of fake news can potentially have highly adverse effects on people and culture. This project involves building and training a model to classify news as fake news or not using a diverse dataset of news articles. We have used four techniques to determine the results of the model.
+Logistic Regression
 
-1. **Logistic Regression**
-2. **Decision Tree Classifier**
-3. **Gradient Boost Classifier**
-4. **Random Forest Classifier**
+Decision Tree Classifier
+
+Gradient Boosting Classifier
+
+Linear Support Vector Machine (Linear SVM) ✅ (Improved Accuracy)
+
 
 ## Project Overview
 
-Fake news has become a significant issue in today's digital age, where information spreads rapidly through various online platforms. This project leverages machine learning algorithms to automatically determine the authenticity of news articles, providing a valuable tool to combat misinformation.
+Fake news has become a major challenge in the digital age, where information spreads rapidly through social media and online platforms. Manual verification of news is inefficient at scale.
+This project leverages Natural Language Processing (NLP) and machine learning algorithms to automatically determine the authenticity of news articles and help combat misinformation.
 
 ## Dataset
 
@@ -20,16 +25,12 @@ We have used a labelled dataset containing news articles along with their corres
 - True: Genuine news articles
 - False: Fake or fabricated news articles
 
-## System Requirements 
+# Model Improvement using Linear SVM
 
-Hardware :
-1. 4GB RAM
-2. i3 Processor
-3. 500MB free space
+After training and evaluating all models, Linear SVM demonstrated better accuracy and F1-score compared to other classifiers.
+This improvement is due to Linear SVM’s effectiveness in handling high-dimensional and sparse text data, especially when combined with TF-IDF features.
 
-Software :
-1. Anaconda
-2. Python
+As a result, Linear SVM was selected as the final model for fake news classification.
 
 ## Dependencies
 
@@ -59,7 +60,7 @@ pip install re
 1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/kapilsinghnegi/Fake-News-Detection.git
+git clone https://github.com/Krinal09/Fake-News-Detection.git
 ```
 
 2. Navigate to the project directory:
@@ -84,11 +85,3 @@ We evaluated each classifier's performance using metrics such as accuracy, preci
 
 Once you are satisfied with the performance of a particular classifier, you can deploy it in a real-world application or integrate it into a larger system for automatic fake news detection.
 ---
-
-## Project Screenshots
-
-#### Not a Fake News
-![Not a Fake News](https://github.com/kapilsinghnegi/Fake-News-Detection/assets/118688453/3d079c46-118a-4c53-a515-43b9146001c5)
-
-#### Fake News
-![Fake News](https://github.com/kapilsinghnegi/Fake-News-Detection/assets/118688453/2f5262f7-801d-4293-824c-13c29fb97fed)
