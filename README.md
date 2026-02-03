@@ -25,6 +25,10 @@ We have used a labelled dataset containing news articles along with their corres
 - True: Genuine news articles
 - False: Fake or fabricated news articles
 
+# MLOps Extension with MLflow
+
+To extend the project beyond traditional model training and evaluation, MLflow was integrated into the workflow as part of the MLOps lifecycle. This enhancement enables experiment tracking, model versioning, and controlled model promotion.
+
 # Model Improvement using Linear SVM
 
 After training and evaluating all models, Linear SVM demonstrated better accuracy and F1-score compared to other classifiers.
@@ -83,5 +87,38 @@ We evaluated each classifier's performance using metrics such as accuracy, preci
 
 ## Model Deployment
 
-Once you are satisfied with the performance of a particular classifier, you can deploy it in a real-world application or integrate it into a larger system for automatic fake news detection.
----
+# Mandatory Conditional Logic Gate (Model Promotion)
+
+To ensure reliable deployment, a conditional logic gate is implemented in the pipeline.
+
+Deployment Rule:
+
+The improved model is promoted only if its F1-score is greater than or equal to the production baseline model.
+
+```bash
+BASELINE_F1_THRESHOLD = 0.94
+
+if new_model_f1 >= BASELINE_F1_THRESHOLD:
+    print("New model approved for deployment")
+    deploy_model = True
+else:
+    print("New model rejected – baseline performs better")
+    deploy_model = False
+```
+
+This logic prevents performance regression and enforces production-level model governance.
+
+# MLflow UI
+
+To visualize experiment runs locally:
+
+```bash
+mlflow ui
+```
+
+Then open the browser at:
+
+```bash
+http://127.0.0.1:5000
+```
+
